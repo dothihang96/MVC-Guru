@@ -1,0 +1,169 @@
+﻿@model IEnumerable<Gurutw.Models.Order>
+
+@{
+    ViewBag.Title = "result";
+    var a = ViewBag.t;
+    //var b = ViewBag.w;
+}
+
+<h2>result</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@section topCSS{
+    <link href="~/Assets/Styles/Result_style/result.css" rel="stylesheet" />
+}
+
+<div class="news-and-principle">
+    <div class="container1">
+        <section class="news">
+            <h2>Orders</h2>
+        </section>
+        <section class="principle">
+            <table class="table" style="outline-color : gray ; outline-style : solid">
+                @foreach (var t in a)
+                {
+                    <tr>
+                        <td>
+                            Order No.  @t.o_id
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td width="40%">
+                            Ordered Date  @t.o_date
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            Product
+                        </td>
+                        <td>
+                            UnitPrice
+                        </td>
+                        <td>
+                            Quantity
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style:none">
+                            <div>
+                                <img src="@t.pp_path" style="width:100px;height:100px;"/>
+                            </div>
+                        </td>
+                        <td width="30%" style="border-top-style:none">
+                            @t.p_name
+                        </td>
+                        <td width="15%" style="border-top-style:none">
+                            @t.od_price
+                        </td>
+                        <td width="15%" style="border-top-style:none">
+                            @t.od_quantity
+                        </td>
+                        <td style="border-top-style:none">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align : right">
+                            Shipping Status 
+                        </td>
+                        <td style="text-align : left">
+                            @*@Html.DisplayFor(modelItem => item.o_status)*@
+                            @if (t.o_status == 0.ToString())
+                            {
+                                <label>Ordered</label>
+                            }
+                            else if (t.o_status == 1.ToString())
+                            {
+                                <label>Shipped</label>
+                            }
+                            else if (t.o_status == 2.ToString())
+                            {
+                                <label>Arrived</label>
+                            }
+                            else if (t.o_status == 3.ToString())
+                            {
+                                <label>Completed</label>
+                            }
+                            else if (t.o_status == 4.ToString())
+                            {
+                                <label>Application for return</label>
+                            }
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style:none ; text-align : right">
+                            Shipping Date 
+                        </td>
+                        <td style="border-top-style:none ; text-align : left">
+
+                            @if (t.o_status == 0.ToString())
+                            {
+                                <label>Unshipped</label>
+                            }
+                            else
+                            {
+                                @t.o_delivedate
+                            }
+                        </td>
+                        <td style="border-top-style:none">
+                            &nbsp;
+                        </td>
+                        <td style="border-top-style:none ; text-align : right">
+                            Totals 
+                        </td>
+                        <td width="30%" style="border-top-style:none ; text-align : left ">
+                            @(t.od_quantity * t.od_price * t.od_discount)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style:none ; text-align : center">
+                            &nbsp;
+                        </td>
+                        <td style="border-top-style:none ; text-align : left">
+                            &nbsp;
+                        </td>
+                        <td style="border-top-style:none">
+                            &nbsp;
+                        </td>
+                        <td style="border-top-style:none">
+                            &nbsp;
+                        </td>
+                        <td style="border-top-style:none" width="30%">
+                            @*@Html.ActionLink("訂單詳細", "Outcome", new { Id = t.o_id }, new { @class = "text-info" })*@
+                            <div class="checkout-btn">
+                                <a href="">
+                                    @Html.ActionLink("More", "Outcome", new { Id = t.o_id }, new { @class = "text-info" })
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </section>
+    </div>
+</div>

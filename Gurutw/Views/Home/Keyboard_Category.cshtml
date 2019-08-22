@@ -1,0 +1,167 @@
+﻿
+@{
+    ViewBag.Title = "keyboard_category";
+    var product = ViewBag.p;
+    DateTime dateTime = DateTime.Now;
+}
+
+@section topCSS{
+    <link href="~/Assets/Styles/category_style/category_styles.css" rel="stylesheet" />
+}
+
+
+<!--滿版-->
+<div class="container-max bg-white">
+
+    <div id="top_img_border" class="mb-5">
+        <img src="/Assets/Images/product_category_img/分類頁上層大圖.jpg" id="top_img" class="mb-5" />
+    </div>
+    
+
+    <div id="img_text">
+        <h2>GAMING MICE</h2>
+        <h2>
+            CHOOSE YOUR WEAPON
+        </h2>
+    </div>
+
+    <div class="container_80 mb-5" id="category_1">
+        <div class="d-flex row" id="mid_data">
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div>
+                    <h5>
+                        Wireless Gaming Mice
+                    </h5>
+                    <p>
+                        Powerful gaming performance without a wire to hold you back
+                    </p>
+                </div>
+                <div>
+                    <img src="/Assets/Images/product_category_img/分類中間圖1.jpg" class="category_mid_img" />
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div>
+                    <h5>
+                        FPS FAST GAMING MICE
+                    </h5>
+
+                    <p>
+                        Precision sensors and comfortable grips to give you the edge
+                    </p>
+                </div>
+                <div>
+                    <img src="/Assets/Images/product_category_img/分類中間圖2.jpg" class="category_mid_img" />
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div>
+                    <h5>
+                        MOBA STRATEGY 
+                    </h5>
+
+                    <p>
+                        Upgrade your game with power and precision
+                    </p>
+                </div>
+                <div>
+                    <img src="/Assets/Images/product_category_img/分類中間圖3.jpg" class="category_mid_img" />
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div>
+                    <h5>
+                        MMO ROLE PLAY GAMING MICE
+                    </h5>
+
+                    <p>
+                        Powerful macro control and session-spanning comfort
+
+                    </p>
+                </div>
+                <div>
+                    <img src="/Assets/Images/product_category_img/分類中間圖4.jpg" class="category_mid_img" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mb-5">
+        <h4>ETEKNIX</h4>
+        <p>"The CORSAIR Glaive is a robust mouse with a surprisingly focused yet very customizable design."</p>
+    </div>
+    <div class="container_80 mb-5">
+
+        <div id="sort_select" class="d-flex justify-content-around mb-5 row">
+            <button id="btn_1" class="col-lg-3 col-sm-6 col-xs-12">PRICE FROM LOW TO HIGH</button>
+            <button id="btn_2" class="col-lg-3 col-sm-6 col-xs-12">PRICE FROM HIGH TO LOW</button>
+            <button id="btn_3" class="col-lg-3 col-sm-6 col-xs-12">DATE FROM OLD TO NEW</button>
+            <button id="btn_4" class="col-lg-3 col-sm-6 col-xs-12">DATE FROM NEW TO OLD</button>
+        </div>
+
+        <div class="row" id="category_item_list">
+            @foreach (var item in product)
+            {
+                string[] i_pics = item.pic_path.Split(',');
+            <div class="product_card carousel slide carousel-fade col-lg-3 col-sm-6 col-xs-12" id="carouselExampleFade" data-ride="carousel" onclick="location.href='/Keyboard/@item.p_id'">
+                <div class="card_body carousel-inner">
+                    @if (i_pics.Length <= 1)
+                    {
+                        <div class="carousel-item">
+                            <img src="@i_pics[0]" alt="#" class="card_img">
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="carousel-item active">
+                            <img src="@i_pics[0]" alt="#" class="card_img">
+                        </div>
+                        for (var i = 1; i < i_pics.Length - 1; i++)
+                        {
+                            <div class="carousel-item ">
+                                <img src="@i_pics[i]" alt="#" class="card_img">
+                            </div>
+                        }
+                    }
+                </div>
+                <div class="text-center mt-2">
+                    <div id="item_data_name">
+                        @item.p_name
+                    </div>
+
+                    @*有折扣時*@
+                    @if (item.d_startdate <= dateTime && item.d_enddate >= dateTime && item.d_discount != 1)
+                    {
+
+                        decimal discount_off = (Convert.ToDecimal(1) - Convert.ToDecimal(item.d_discount)) * 100;
+
+
+                        <div class="item_price">
+                            <span id="price_line-through">@Decimal.Round(item.p_unitprice)</span>
+                            <span id="price_discount">@discount_off%OFF </span>
+                        </div>
+                        <p class="item_price">@Decimal.Round(item.p_unitprice * Convert.ToDecimal(item.d_discount)) </p>
+                        <p class="item_date">@item.p_lauchdate.ToShortDateString().ToString()</p>
+                    }
+                    else
+                    {
+                        <p class="item_price">@Decimal.Round(item.p_unitprice)  </p>
+                        <p class="item_date">@item.p_lauchdate.ToShortDateString().ToString()</p>
+                    }
+                </div>
+            </div>
+            }
+        </div>
+
+
+    </div>
+
+
+</div>
+
+@section endJS{
+    <script src="~/Assets/js/catagory_js.js"></script>
+}
+

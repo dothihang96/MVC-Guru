@@ -1,0 +1,659 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+html body {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+.new-item {
+  height: 600px;
+  overflow: hidden;
+}
+
+.new-item video {
+  height: auto;
+  width: 100%;
+}
+
+.new-item-video {
+  height: 50%;
+  width: 100%;
+}
+
+.new-item-title {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -45%);
+          transform: translate(-50%, -45%);
+}
+
+.new-item-title h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.new-item-title .learn-more {
+  margin-top: 45px;
+  padding: 18px 40px;
+  height: auto;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: none;
+  background-color: #fecb00;
+}
+
+.new-item-title .learn-more:hover {
+  background-color: white;
+}
+
+.menu-slide .div-explore {
+  padding-top: 50px;
+}
+
+.menu-slide .explore {
+  font-weight: bold;
+}
+
+.carousel-inner .carousel-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 25px 0;
+  -webkit-transition: -webkit-transform 0s ease-in-out !important;
+  transition: -webkit-transform 0s ease-in-out !important;
+  transition: transform 0s ease-in-out !important;
+  transition: transform 0s ease-in-out, -webkit-transform 0s ease-in-out !important;
+}
+
+.carousel-inner .carousel-item div {
+  text-align: center;
+  cursor: pointer;
+}
+
+.carousel-inner .carousel-item div:hover img {
+  -webkit-transform: translate(0px, -15px);
+          transform: translate(0px, -15px);
+}
+
+.carousel-inner .carousel-item div:hover p img {
+  -webkit-transform: none;
+          transform: none;
+  padding: 0 15px;
+}
+
+.carousel-inner .carousel-item img {
+  width: 140px;
+  height: 150px;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+}
+
+.carousel-inner .carousel-item p img {
+  width: 140px;
+  height: 30px;
+}
+
+.carousel-inner .carousel-item h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #393939;
+}
+
+.carousel-control-prev {
+  left: -10%;
+}
+
+.carousel-control-next {
+  right: -10%;
+}
+
+.prev-icon, .next-icon {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 50%;
+  background-color: #302f2f;
+}
+
+.corsair-in-action {
+  background-color: #393939;
+  text-align: center;
+  color: white;
+}
+
+.corsair-in-action .text-center {
+  padding: 60px 0;
+}
+
+.corsair-in-action .text-center h1 span {
+  font-weight: bolder;
+}
+
+.corsair-in-action .total-ones {
+  width: 100%;
+  overflow: hidden;
+}
+
+.corsair-in-action .big-one {
+  width: 48.9%;
+  height: 595px;
+  margin: 0.5%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+.corsair-in-action .big-one div:first-child {
+  width: 100%;
+  height: 100%;
+  padding-top: 5%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.corsair-in-action .big-one p {
+  top: 13%;
+}
+
+.corsair-in-action .big-one h2 {
+  top: 5.25%;
+}
+
+.corsair-in-action .big-one p, .corsair-in-action .big-one h2 {
+  width: 100%;
+  display: block;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  position: absolute;
+}
+
+.corsair-in-action .big-one button {
+  position: absolute;
+  border: none;
+  padding: 15px 25px;
+  background-color: #fecb00;
+  color: black;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  left: 50%;
+  top: 80%;
+  display: none;
+}
+
+.corsair-in-action .big-one:focus, .corsair-in-action .big-one:hover {
+  cursor: pointer;
+}
+
+.corsair-in-action .big-one:focus button, .corsair-in-action .big-one:hover button {
+  display: block;
+}
+
+.corsair-in-action .big-one:focus div:first-child, .corsair-in-action .big-one:hover div:first-child {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.corsair-in-action .small-one {
+  width: 48.9%;
+  height: 291.5px;
+  float: left;
+  overflow: hidden;
+  margin: 0.5%;
+  position: relative;
+}
+
+.corsair-in-action .small-one div:first-child {
+  width: 100%;
+  height: 100%;
+  padding-top: 5%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.corsair-in-action .small-one p {
+  top: 20%;
+}
+
+.corsair-in-action .small-one h2 {
+  top: 5.25%;
+}
+
+.corsair-in-action .small-one p, .corsair-in-action .small-one h2 {
+  width: 100%;
+  display: block;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  position: absolute;
+}
+
+.corsair-in-action .small-one button {
+  position: absolute;
+  border: none;
+  padding: 15px 25px;
+  background-color: #fecb00;
+  color: black;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  left: 50%;
+  top: 60%;
+  display: none;
+}
+
+.corsair-in-action .small-one:focus, .corsair-in-action .small-one:hover {
+  cursor: pointer;
+}
+
+.corsair-in-action .small-one:focus button, .corsair-in-action .small-one:hover button {
+  display: block;
+}
+
+.corsair-in-action .small-one:focus div:first-child, .corsair-in-action .small-one:hover div:first-child {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.new-item-container {
+  position: relative;
+}
+
+.move-svg-wrapper {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -150%);
+          transform: translate(-50%, -150%);
+}
+
+svg {
+  fill: #fecb00;
+  -webkit-animation: moving 1.5s infinite;
+          animation: moving 1.5s infinite;
+}
+
+svg:hover {
+  cursor: pointer;
+  fill: white;
+}
+
+.move-svg {
+  width: auto;
+  height: 75px;
+}
+
+.two-ones, .three-ones {
+  display: none;
+}
+
+@-webkit-keyframes moving {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes moving {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1296px) {
+  .corsair-in-action .big-one {
+    height: 593px;
+  }
+}
+
+@media screen and (max-width: 1268px) {
+  .corsair-in-action .big-one {
+    height: 592px;
+  }
+}
+
+@media screen and (max-width: 1143px) {
+  .corsair-in-action .big-one {
+    height: 591px;
+  }
+  .move-svg-wrapper {
+    -webkit-transform: translate(-50%, -180%);
+            transform: translate(-50%, -180%);
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .new-item-title h1 {
+    font-size: 3rem;
+  }
+  .menu-slide .div-explore {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .move-svg-wrapper {
+    -webkit-transform: translate(-50%, -220%);
+            transform: translate(-50%, -220%);
+  }
+  .five-ones {
+    display: none;
+  }
+  .three-ones {
+    display: block;
+  }
+  .menu-slide .div-explore {
+    padding-top: 0px;
+  }
+}
+
+@media screen and (max-width: 946px) {
+  .move-svg-wrapper {
+    -webkit-transform: translate(-50%, -260%);
+            transform: translate(-50%, -260%);
+  }
+  .new-item-title {
+    top: 45%;
+  }
+  .new-item-title .learn-more {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+  }
+  .corsair-in-action .big-one {
+    height: 490px;
+  }
+  .corsair-in-action .big-one p {
+    top: 15%;
+  }
+  .corsair-in-action .small-one {
+    height: 241.5px;
+  }
+  .corsair-in-action .small-one p {
+    top: 25%;
+  }
+}
+
+@media screen and (max-width: 906px) {
+  .new-item {
+    height: 550px;
+  }
+  .move-svg-wrapper {
+    -webkit-transform: translate(-50%, -230%);
+            transform: translate(-50%, -230%);
+  }
+  .menu-slide .div-explore h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 841px) {
+  .new-item {
+    height: 520px;
+  }
+  .move-svg-wrapper {
+    -webkit-transform: translate(-50%, -220%);
+            transform: translate(-50%, -220%);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .new-item {
+    height: 490px;
+  }
+  .move-svg-wrapper {
+    -webkit-transform: translate(-50%, -205%);
+            transform: translate(-50%, -205%);
+  }
+  .new-item-title h2 {
+    font-size: 1.5rem;
+  }
+  .corsair-in-action .big-one {
+    height: 489.5px;
+  }
+}
+
+@media screen and (max-width: 741px) {
+  .new-item {
+    height: 450px;
+  }
+  .move-svg-wrapper {
+    -webkit-transform: translate(-50%, -185%);
+            transform: translate(-50%, -185%);
+  }
+  .new-item-title h2 {
+    font-size: 1.5rem;
+  }
+  .new-item-title h1 {
+    font-size: 2.5rem;
+  }
+  .corsair-in-action .big-one {
+    height: 216.5px;
+  }
+  .corsair-in-action .big-one button {
+    padding: 15px;
+    top: 60%;
+  }
+  .corsair-in-action .big-one p {
+    top: 25%;
+  }
+  .corsair-in-action .small-one {
+    height: 216.5px;
+  }
+  .corsair-in-action .small-one button {
+    padding: 15px;
+  }
+  .footer-menu .frame-container a {
+    font-size: 0.9rem;
+  }
+  .carousel-control-next {
+    right: -5%;
+  }
+  .carousel-control-prev {
+    left: -5%;
+  }
+}
+
+@media screen and (max-width: 715px) {
+  .new-item {
+    height: 430px;
+  }
+  .move-svg-wrapper {
+    -webkit-transform: translate(-50%, -175%);
+            transform: translate(-50%, -175%);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .new-item video {
+    height: 460px;
+  }
+  .menu-slide .div-explore {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .corsair-in-action .big-one {
+    height: 291.5px;
+    width: 98.8%;
+  }
+  .corsair-in-action .big-one button {
+    padding: 15px;
+    top: 60%;
+  }
+  .corsair-in-action .big-one p {
+    top: 25%;
+  }
+  .corsair-in-action .small-one {
+    height: 291.5px;
+    width: 98.8%;
+  }
+  .corsair-in-action .small-one button {
+    padding: 15px;
+  }
+  .footer-menu .frame-container div {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .new-item video {
+    height: 490px;
+  }
+  .new-item-title h1 {
+    font-size: 2rem;
+  }
+  .new-item-title h2 {
+    font-size: 1.2rem;
+  }
+  .new-item-title .learn-more {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .three-ones {
+    display: none;
+  }
+  .two-ones {
+    display: block;
+  }
+  .carousel-item {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 521px) {
+  .new-item video {
+    width: 150%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .new-item-title {
+    top: 50%;
+  }
+  .new-item-title h1 {
+    font-size: 1.8rem;
+  }
+  .new-item-title h2 {
+    font-size: 1.1rem;
+  }
+  .move-svg-wrapper {
+    -webkit-transform: translate(-50%, -160%);
+            transform: translate(-50%, -160%);
+  }
+  .carousel-inner .carousel-item div {
+    padding: 0 20px;
+  }
+  .guru-action-title h1 {
+    font-size: 2rem;
+  }
+  .corsair-in-action .big-one h2 {
+    font-size: 1.8rem;
+    top: 6%;
+  }
+  .corsair-in-action .small-one h2 {
+    font-size: 1.8rem;
+    top: 6.5%;
+  }
+  .menu-slide .div-explore h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .prev-icon, .next-icon {
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+  }
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .corsair-in-action .big-one p, .corsair-in-action .small-one p {
+    top: 40%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .new-item video {
+    width: 180%;
+  }
+  .new-item-title {
+    top: 47%;
+  }
+  .move-svg-wrapper {
+    -webkit-transform: translate(-50%, -140%);
+            transform: translate(-50%, -140%);
+  }
+  .carousel-inner .carousel-item img {
+    width: 100px;
+    height: 110px;
+  }
+  .carousel-inner .carousel-item p img {
+    width: 100px;
+  }
+  .carousel-inner .carousel-item h3 {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 332px) {
+  .corsair-in-action .big-one button {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .corsair-in-action .small-one button {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .new-item video {
+    width: 215%;
+  }
+}
+/*# sourceMappingURL=StylesheetIndex.css.map */
